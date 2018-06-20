@@ -1,2 +1,11 @@
-fib = Hash.new{ |a,b| a[b] = b < 2 ? b : a[b-1] + a[b-2] }
-print fib[3]
+def fib(n) 
+	temp = Hash.new{ |a,b| a[b] = b < 2 ? b : a[b-1] + a[b-2] }
+	return temp[n]
+end
+def pri(n)
+	for i in 0..n
+		puts fib(i)
+	end
+end
+
+pri 10
